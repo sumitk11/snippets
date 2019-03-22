@@ -31,9 +31,9 @@ function getColors(hex) {
   if (!/[0-9a-fA-F]{6}/.test(hex)) {
     return defaultColors;
   }
-  const r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16);
-  const g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16);
-  const b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+  const r = (255 - parseInt(hex.slice(0, 2), 16));
+  const g = (255 - parseInt(hex.slice(2, 4), 16));
+  const b = (255 - parseInt(hex.slice(4, 6), 16));
   return {
     textColor: r * 0.299 + g * 0.587 + b * 0.114 < 186 ? '#000000' : '#FFFFFF',
     background: '#' + hex };
